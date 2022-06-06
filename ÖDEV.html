@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Başlıksız Belge</title>
+	<style>
+		span
+		{
+			margin-left: 590px;
+			text-align: center;
+			color:blueviolet;
+			background-color: chartreuse;
+		}
+		body
+		{
+		background-color: aqua;
+		font-weight: bold;
+		color:rgba(201,11,14,1.00);
+			
+		}
+	</style>
+</head>
+
+<body>
+	<span>İBRAHİM SAMİ ÜRER</span><br>
+	<script type="text/javascript" language="javascript">
+	//DATE 			:KULLANDIĞIĞINIZ DEĞİŞKEN İÇERİSİNDE  TARİH VE SAAT BİLGİLERİNİ DEPOLAYARAK DEPOLADIĞI DEĞERİ GERİYE DÖNDÜRÜR.               (TARİHE ETKİ EDİLEBİLİR.)
+	//GETFULLYEAR	:KULLANILDIĞI DEĞİŞKEN İÇERİĞİNE  YIL BİLGİSİNİ 1000 İLE 9999 ARASINDA OLMAK ÜZERE  RAKAMSAL OLARAK DEPOLAYARAK DEPOLADIĞI DEĞERİ GERİYE DÖNDÜRÜR.
+	//GETMONTH      :KULLANILDIĞI DEĞİŞKEN İÇERİĞİNE YILIN AY BİLGİSİNİ  0 İLE 11 ARASINDA OLMAK ÜZERE RAKAMSAL OLARAK DEPOLAYARAK DEPOLADIĞI DEĞERİ GERİYE DÖNDÜRÜR.	
+	//GETDATE       :KULLANILDIĞI DEĞİŞKENİN AYIN GÜN BİLGİSİNİ  1 İLE 31 ARASINDA OLMAK ÜZERE RAKAMSAL OLARAK DEPOLAYARAK DEPOLADIĞI DEĞERİ GERİYE DÖNDÜRÜR.
+	//GET DAY       :KULLANILDIĞI DEĞİŞKEN İÇERİĞİNE HAFTANIN GÜN BİLGİSİNİ 0 İLE 6 ARASINDA OLMAK ÜZERE RAKAMSAL OLARAK DEPOLAYARAK DEPOLADIĞI DEĞERİ GERİYE DÖNDÜRÜR.(HAFTANIN İLK GÜNÜ PAZAR OLARAK ALGILANIR VE DEĞERİ 0 DIR.)
+	//GET HOURS     :KULLANILDIĞI DEĞİŞKEN İÇERİSİNE SAAT BİLGİSİNİ 0 İLE 23 ARASINDA OLMAK ÜZERE RAKAMSAL OLARAK DEPOLAYARAK DEPOLADIĞI DEĞERİ GERİYE DÖNDÜRÜR.
+	//GET MİNUTES     :KULLANILDIĞI DEĞİŞKEN İÇERİSİNE DAKİKA BİLGİSİNİ 0 İLE 59 ARASINDA OLMAK ÜZERE RAKAMSAL OLARAK DEPOLAYARAK DEPOLADIĞI DEĞERİ GERİYE DÖNDÜRÜR.
+	//GET SECONDS     :KULLANILDIĞI DEĞİŞKEN İÇERİSİNE SANİYE BİLGİSİNİ 0 İLE 59 ARASINDA OLMAK ÜZERE RAKAMSAL OLARAK DEPOLAYARAK DEPOLADIĞI DEĞERİ GERİYE DÖNDÜRÜR.	
+	//GET MİLİSECONDS     :KULLANILDIĞI DEĞİŞKEN İÇERİSİNE SANİYENİN MİLİSANİYE BİLGİSİNİ 0 İLE 999 ARASINDA OLMAK ÜZERE RAKAMSAL OLARAK DEPOLAYARAK DEPOLADIĞI DEĞERİ GERİYE DÖNDÜRÜR.
+	var tarih=new Date();
+	document.write(tarih);	
+	document.write("<br><br>");	
+	var tarihiki=new Date(2010,05,22,22,30,35,33);
+	document.write(tarihiki);	
+	document.write("<br><br>");	
+	var tarihuc=new Date("April,03,2006 16:25:57:11");
+	document.write(tarihuc);	
+	document.write("<br><br>");	
+	
+	
+	var tarihim=new Date();
+	document.write("NESNE OLARAK TARİH: "+tarihim+"<br>");
+	var donustur=String(tarihim);
+	document.write("STRİNG OLARAK TARİH: "+donustur+"<br>");
+	var parcala=donustur.split(" ");
+	var kisagun=parcala[0];
+	var kisaay=parcala[1];
+	var tgun=parcala[2];	
+	var tyıl=parcala[3];
+	var tsaat=parcala[4];
+	var tdak=parcala[5];
+	var tsan=parcala[6];	
+	document.write("GÜN: "+parcala[0]+"<br>");
+	document.write("AY: "+parcala[1]+"<br>");
+	document.write("GÜN: "+parcala[2]+"<br>");
+	document.write("YIL: "+parcala[3]+"<br>");
+    var tamsaatim=parcala[4];
+	var parcalasaat=tamsaatim.split(":");
+	var saat=parcalasaat[0];
+	document.write("SAAT: "+parcalasaat[0]+"<br>");
+	var dakika=parcalasaat[1];
+	document.write("DAKİKA: "+parcalasaat[1]+"<br>");
+	var saniye=parcalasaat[2];
+	document.write("SANİYE: "+parcalasaat[2]+"<br>");
+	var gmt=parcala[5];
+	document.write("GMT DEĞERİ: "+parcala[5]+"<br><br>");
+	
+		
+	var benimzamanım=new Date();
+	document.write(benimzamanım+"<br>");	
+	var benimyilim=benimzamanım.getFullYear();
+	var benimayim=benimzamanım.getMonth();
+	var benimgünüm=benimzamanım.getDate();
+	var benimgünüm2=benimzamanım.getDay(); 
+	var benimgünüm3=benimzamanım.getHours();	
+	var benimgünüm4=benimzamanım.getMinutes();	
+	var benimgünüm5=benimzamanım.getSeconds();	
+	var benimgünüm6=benimzamanım.getMilliseconds();	
+	document.write("İÇİNDE BULUNULAN YIL: "+benimyilim+"<br>");
+	document.write("İÇİNDE BULUNULAN AY: "+benimayim+"<br>");
+	document.write("İÇİNDE BULUNULAN GÜN: "+benimgünüm+"<br>");
+	document.write("İÇİNDE BULUNULAN HAFTANIN GÜNÜ: "+benimgünüm2+"<br>");
+	document.write("İÇİNDE BULUNULAN SAAT: "+benimgünüm3+"<br>");
+	document.write("İÇİNDE BULUNULAN DAKİKA: "+benimgünüm4+"<br>");
+	document.write("İÇİNDE BULUNULAN SANİYE: "+benimgünüm5+"<br>");
+	document.write("İÇİNDE BULUNULAN MİLİSANİYE: "+benimgünüm6+"<br>");
+	</script>
+	<hr>
+</body>
+</html>
